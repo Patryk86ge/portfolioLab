@@ -1,0 +1,66 @@
+//---------------------mixiny
+@mixin flex-fs() {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin flex-fe() {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-cool(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@mixin bg-posysion(){
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin flex-fsb(){
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-fsa(){
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin flex-column(){
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-wrap(){
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin notebook {
+  @media (max-width: 1352px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 792px) {
+    @content;
+  }
+}
+

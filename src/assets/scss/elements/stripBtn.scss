@@ -1,0 +1,21 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.Strip_btn {
+  height: 235px;
+  @include flex-center;
+  .btn {
+    text-align: center;
+    width: 310px;
+    height: 120px;
+    border: 1px solid $color_Font;
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px auto;
+    a {
+      text-decoration: none;
+      line-height: 3.5rem;
+      color: $color_Font;
+    }
+  }
+}

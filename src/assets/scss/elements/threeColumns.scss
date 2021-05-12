@@ -1,0 +1,38 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.threeColumns {
+  padding-top: 50px;
+  background-color: $color_Border;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 00px;
+  grid-template-areas:
+    "."
+    "."
+    ".";
+
+  height: 100%;
+  text-align: center;
+  align-items: center;
+}
+.three_nr {
+  padding-top: 10px;
+}
+.three_longText {
+  padding: 0 50px;
+}
+
+@media (min-width: 720px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 00px;
+    grid-template-areas: ". . .";
+    height: 384px;
+  }
+}

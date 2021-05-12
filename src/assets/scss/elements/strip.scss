@@ -1,0 +1,23 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+.strip {
+  height: 200px;
+  background-color: palevioletred;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primer-white;
+  .Decoration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 2rem;
+      color: $color_Font;
+      font-family:"Open Sans" ;
+      text-align: center;
+    }
+
+  }
+}

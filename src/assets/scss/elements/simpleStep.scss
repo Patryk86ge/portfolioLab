@@ -1,0 +1,50 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.simple_Step {
+  background-color: $color_primary;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      "."
+      "."
+      ".";
+  }
+  .simple_StepLine {
+    border-bottom: 1px solid $color_3;
+    width: 70px;
+    margin-bottom: 8px;
+  }
+  .simple_StepBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .simple_StepText {
+    margin: 10px 0;
+  }
+}
+@media (min-width: 720px) {
+  .simple_Step {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 0px 0px;
+      grid-template-areas: ". . . .";
+      padding: 0 100px;
+    }
+  }
+  .simple_StepBox {
+    padding: 0 30px;
+  }
+}

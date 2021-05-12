@@ -1,0 +1,112 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+}
+.nav_menu {
+  display: flex;
+  justify-content: center;
+}
+.hamburger {
+  background-color: white;
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-top: 5px solid $color_Font;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  margin: 13px 15px 0 10px;
+}
+.hamburger {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    border-top: 5px solid $color_Font;
+  }
+}
+
+.hamburger {
+  &:after {
+    top: 25px;
+  }
+}
+.menu {
+  display: none;
+  background-color: white;
+  height: 66px;
+}
+.menu__show {
+  display: block;
+  position: absolute;
+  top: 66px;
+  left: 0;
+  width: 100vw;
+  z-index: 9999;
+  background-color: white;
+}
+.menu_list {
+  margin: 0;
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: "Open Sans";
+    color: $color_Font;
+    text-decoration: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  // padding: 4px 0 ;
+  margin: 8px 0 5px 0;
+  a {
+    text-decoration: none;
+    padding: 9px;
+    color: $color_3;
+    font-size: 0.8rem;
+    font-family: "Open Sans";
+  }
+  .login_border {
+    border: 1px solid $color_Border;
+  }
+}
+
+@media (min-width: 720px) {
+  .nav_menu {
+    display: block;
+  }
+  .hamburger {
+    display: none;
+  }
+  .list_start {
+    border: 1px solid $color_Font;
+  }
+
+  .menu {
+    display: block;
+    box-shadow: none;
+    padding-right: 30px;
+
+    .menu_list {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
