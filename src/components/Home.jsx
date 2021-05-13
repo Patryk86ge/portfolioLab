@@ -5,6 +5,8 @@ import SimpleStep from './SimpleStep'
 import StripBtn from './StripBtn'
 import AboutAs from './AboutAs'
 import WhoweHelp from './WhoweHelp'
+import Contact from './Contact'
+import Footer from './Footer'
 
 // import Footer from './Footer'
 
@@ -17,6 +19,8 @@ const Home = () => {
         <StripBtn />
         <AboutAs />
         <WhoweHelp/>
+        <Contact/>
+        <Footer />
         </>
     )
 }
