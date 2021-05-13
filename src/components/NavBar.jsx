@@ -13,25 +13,48 @@ function NavBar() {
         </div>
         <div className={show ? "menu" : "menu__show"}>
           <ul className="menu_list">
-            <Link className="list list_start" to="/">
+            <Link
+            className="list list_start"
+            to="/"
+            activeStyle={{border: '1px solid #3C3C3C'}}
+            >
               Start
             </Link>
-            <Link className = "list"
-            to = "/simpleStep" >
+            <Link
+            className = "list"
+            to = "/simpleStep"
+            activeStyle={{border: '1px solid #3C3C3C'}}
+            >
               O co Chodzi?
             </Link>
-            <Link className="list" to="/">
+            <Link
+            className="list"
+            to="/aboutAs"
+            activeStyle={{border: '1px solid #3C3C3C'}}
+            >
               O nas
             </Link>
-            <Link className="list" to="/">
+            <Link
+            className="list"
+            to="/"
+            activeStyle={{border: '1px solid #3C3C3C'}}
+            >
               Fundacja i organizacja
             </Link>
-            <Link className="list" to="/">
+            <Link
+            className="list"
+            to="/"
+            activeStyle={{border: '1px solid #3C3C3C'}}
+            >
               Kontakt
             </Link>
           </ul>
         </div>
-        <button className="hamburger" onClick={() => setShow(!show)}></button>
+        <button
+        className="hamburger"
+        onClick={() => setShow(!show)}
+        >
+        </button>
       </div>
     </nav>
   );

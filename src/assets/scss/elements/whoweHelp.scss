@@ -1,0 +1,53 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.WhoweHelp {
+  .container {
+    text-align: center;
+    padding: 0 150px;
+  }
+  .WhoweHelp__btnBox {
+    @include flex-fsa;
+    margin-bottom: 50px;
+    a {
+      font-family: "Open Sans";
+      border: 1px solid $color_3;
+      padding: 15px 20px;
+      text-decoration: none;
+      color: $color_Font;
+      font-size:1.5rem ;
+    }
+  }
+  .WhoweHelp_text {
+    margin: 0 110px;
+    font-family: "Open Sans";
+    color: $color_Font;
+      font-size:1.2rem ;
+  }
+  .WhoweHelp_box{
+    margin-top: 50px;
+  }
+  .WhoweHelp_boxText {
+    border-bottom: 1px solid $color_3;
+    margin-top: 23px;
+  }
+  .WhoweHelp_link{
+    margin: 30px;
+    a {
+      font-family: "Open Sans";
+     
+      padding: 7px;
+      margin: 0 15px;
+      text-decoration: none;
+      color: $color_Font;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .WhoweHelp_boxText {
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+  }
+}

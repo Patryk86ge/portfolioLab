@@ -6,9 +6,8 @@ const StripBtn = () => {
   return (
     <section className="Strip_btn">
       <div className="btn">
-        <Link to="/">
-          ODDAJ
-          <br />
+        <Link to = "/login" >
+          ODDAJ<br/>
           RZECZY
         </Link>
       </div>

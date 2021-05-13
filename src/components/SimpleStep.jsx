@@ -1,4 +1,5 @@
 import React from 'react'
+import Strip from './Strip'
 
 import imgTshirt from '../assets/image/Icon-1.svg';
 import imgBag from "../assets/image/Icon-2.svg";
@@ -9,7 +10,10 @@ import "../assets/scss/elements/simpleStep.scss";
 
 const SimpleStep = () => {
   return (
+    <>
+       <Strip text='Wystarczą 4 proste kroki'/>
     <section id="simpleStep" className="simple_Step">
+ 
       <div class="grid-container">
         <div className="simple_StepBox">
           <img src={imgTshirt} alt="Bag" />
@@ -39,6 +43,7 @@ const SimpleStep = () => {
         </div>
       </div>
     </section>
+    </>
   );
 }
 
