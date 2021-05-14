@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import * as Scroll from 'react-scroll';
 import "../assets/scss/elements/navBar.scss";
+
+
 
 function NavBar() {
   const [show, setShow] = useState(true);
+  // let Link = Scroll.Link;
   return (
     <nav className="nav">
       <div className="nav_menu">
@@ -12,43 +16,43 @@ function NavBar() {
           <Link className='login_border' to="/login">Załóż Konto</Link>
         </div>
         <div className={show ? "menu" : "menu__show"}>
-          <ul className="menu_list">
-            <Link
+          <div className="menu_list">
+            <Scroll.Link
             className="list list_start"
             to="/"
             activeStyle={{border: '1px solid #3C3C3C'}}
             >
               Start
-            </Link>
-            <Link
+            </Scroll.Link>
+            <Scroll.Link
             className = "list"
-            to = "/simpleStep"
+            to = "simpleStep"
             activeStyle={{border: '1px solid #3C3C3C'}}
             >
               O co Chodzi?
-            </Link>
-            <Link
+            </Scroll.Link>
+            <Scroll.Link
             className="list"
-            to="/aboutAs"
+            to = "aboutAs"
             activeStyle={{border: '1px solid #3C3C3C'}}
             >
               O nas
-            </Link>
-            <Link
+            </Scroll.Link>
+            <Scroll.Link
             className="list"
-            to="/"
+            to = "whoweHelp"
             activeStyle={{border: '1px solid #3C3C3C'}}
             >
               Fundacja i organizacja
-            </Link>
-            <Link
+            </Scroll.Link>
+            <Scroll.Link
             className="list"
-            to="/"
+            to = "contact"
             activeStyle={{border: '1px solid #3C3C3C'}}
             >
               Kontakt
-            </Link>
-          </ul>
+            </Scroll.Link>
+          </div>
         </div>
         <button
         className="hamburger"

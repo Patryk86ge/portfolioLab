@@ -5,9 +5,9 @@ import "../assets/scss/elements/whoweHelp.scss";
 
 const WhoweHelp = () => {
   return (
-    <>
+      <section id = "whoweHelp"
+      className = "WhoweHelp" >
       <Strip text="Komu pomagamy?" />
-      <section className="WhoweHelp">
         <div className="container">
           <div className="WhoweHelp__btnBox">
             <Link
@@ -79,7 +79,6 @@ const WhoweHelp = () => {
           </div>
         </div>
       </section>
-    </>
   );
 };
 

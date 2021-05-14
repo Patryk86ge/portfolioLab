@@ -7,7 +7,7 @@ import imgStyle from "../assets/image/Decoration.svg";
 
 const AboutAs = () => {
   return (
-    <section className="about_ass">
+    <section id="aboutAs" className="about_ass">
       <div class="grid-container">
         <div className="about_box">
           <h1 className="about_nag">O nas</h1>
@@ -24,7 +24,7 @@ const AboutAs = () => {
           </div>
         </div>
         <div className="about_img">
-          <img src={people} alt="people"/>
+          <img src={people} alt="people" />
         </div>
       </div>
     </section>

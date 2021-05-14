@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 import "../assets/scss/elements/contact.scss";
 import Strip from "./Strip";
 
-import contactForm from '../assets/image/Background-Contact-Form.jpg'
+import contactForm from "../assets/image/Background-Contact-Form.jpg";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <div class="grid-container">
         <div className="contact_img">
           <img src={contactForm} alt="blanket" />
@@ -23,6 +23,6 @@ const Contact = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Contact
+export default Contact;

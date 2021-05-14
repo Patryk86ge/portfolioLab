@@ -5,7 +5,7 @@
   background-color: $color_primary;
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
   .grid-container {
     display: grid;
