@@ -84,6 +84,11 @@
   .login_border {
     border: 1px solid $color_Border;
   }
+  span{
+    color: $color_3;
+    font-size: 0.8rem;
+    font-family: "Open Sans";
+  }
 }
 
 @media (min-width: 720px) {

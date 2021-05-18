@@ -5,7 +5,7 @@ import Instagram from "../assets/image/Instagram.svg";
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <footer className="footer">
       <div className="container">
         <p>Copyright by Coders Lab</p>
         <div className="footer_ico">
@@ -17,7 +17,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 

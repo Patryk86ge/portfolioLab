@@ -12,7 +12,7 @@ const SimpleStep = () => {
   return (
       <section id="simpleStep" className="simple_Step">
         <Strip text="Wystarczą 4 proste kroki" />
-        <div class="grid-container">
+        <div className="grid-container">
           <div className="simple_StepBox">
             <img src={imgTshirt} alt="Bag" />
             <p className="simple_StepText">Wybierz rzeczy</p>

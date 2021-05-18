@@ -26,13 +26,15 @@
   }
   .about_nag {
     font-size: 2.4rem;
+    padding-top: 50px;
   }
   img {
     margin: 0;
+    padding-bottom: 50px;
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 990px) {
   .about_ass {
     .grid-container {
       display: grid;

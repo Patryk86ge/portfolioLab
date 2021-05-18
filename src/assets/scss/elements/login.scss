@@ -1,0 +1,34 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+.login_form {
+  @include flex-cool;
+
+  .container {
+    @include flex-cool;
+    .login_box {
+      @include flex-cool;
+      .login_input {
+        background-color: $color_primary;
+        @include flex-cool;
+        align-items: flex-start;
+        padding: 30px 80px;
+      }
+    }
+    .login_btn {
+      padding: 50px 0;
+      font-family: "Open Sans";
+      font-size: 1rem;
+      button {
+        margin: 0 150px;
+        border: none;
+        background-color: $primer-white;
+        &:hover {
+          border: 0.75px solid $color_Font;
+        }
+      }
+    }
+  }
+}
+.login_strip {
+  margin-top: 50px;
+}

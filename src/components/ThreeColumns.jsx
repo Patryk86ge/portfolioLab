@@ -8,7 +8,7 @@ const collection = [7];
 const ThreeColumns = () => {
   return (
     <section className="threeColumns">
-      <div class="grid-container">
+      <div className="grid-container">
         <div className="three_box">
           <h1 className="three_nr">{donatedBags}</h1>
           <p>ODDANYCH WORKÓW</p>

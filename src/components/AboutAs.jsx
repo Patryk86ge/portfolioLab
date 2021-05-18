@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/scss/elements/aboutAs.scss";
-
 import people from "../assets/image/People.jpg";
 import Signature from "../assets/image/Signature.svg";
 import imgStyle from "../assets/image/Decoration.svg";
@@ -8,7 +7,7 @@ import imgStyle from "../assets/image/Decoration.svg";
 const AboutAs = () => {
   return (
     <section id="aboutAs" className="about_ass">
-      <div class="grid-container">
+      <div className="grid-container">
         <div className="about_box">
           <h1 className="about_nag">O nas</h1>
           <div className="about_line">

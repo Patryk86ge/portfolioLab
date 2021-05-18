@@ -1,5 +1,5 @@
-@import "../settings/mixin";
-@import "../settings/colors";
+@import "../scss/settings/mixin";
+@import "../scss/settings/colors";
 
 .Strip_btn {
   height: 235px;
@@ -11,7 +11,7 @@
     border: 1px solid $color_Font;
     text-align: center;
     font-size: 2rem;
-    margin: 40px auto;
+    margin: 40px 30px;
     a {
       text-decoration: none;
       line-height: 3.5rem;

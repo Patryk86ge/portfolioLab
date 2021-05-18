@@ -1,0 +1,19 @@
+@import "../scss/settings/mixin";
+@import "../scss/settings/colors";
+input {
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+label {
+  margin-left: 10px;
+  padding-top: 30px;
+  font-family: "Open Sans";
+  font-size: 1rem;
+}
+input {
+  border-bottom: 1px solid $color_3;
+}
