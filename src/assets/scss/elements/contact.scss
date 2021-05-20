@@ -50,12 +50,19 @@
       background-color: $primer-white;
       font-family: "Open Sans";
       font-size: 1.05rem;
+      cursor: pointer;
     }
   }
   textarea {
     padding: 5px;
     margin: 5px;
     border: none;
+    font-size: 1.2rem;
+    font-family: "Open Sans";
+    color: $color_3;
+    &:focus {
+      outline: none;
+    }
   }
   textarea {
     border-bottom: 1px solid $color_Font;

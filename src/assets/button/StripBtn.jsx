@@ -1,14 +1,15 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import "./stripBtn.scss";
 
 const StripBtn = (props) => {
   return (
     <div className="Strip_btn">
       <div className="btn">
-        <Link to = {props.path} >
-          {props.text}<br/>{props.txt}
-        </Link>
+        <NavHashLink to={props.path}>
+          <p>{props.text}</p>
+          <p>{props.txt}</p>
+        </NavHashLink>
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 import React from "react";
 import FundCard from "../assets/whoWeHelp/FundCard";
 import FoundationInfo from "../assets/whoWeHelp/FoundationInfo";
-import Card from './card'
+import Card from "./card";
 
 const Foundation = () => {
   return (
     <>
       <Card />
-      <section id="whoweHelp" className="WhoweHelp">
+      <section className="WhoweHelp">
         <div className="container">
           <div className="whoweHelp_card">
             {FoundationInfo.map((el) => (
@@ -33,7 +33,7 @@ export default Foundation;
 // [
 //
 //  //       <Strip text="Komu pomagamy?" />
-//  //     
+//  //
 //  //         <div className="WhoweHelp__btnBox">
 //  //           <Link
 //             to="/Foundation"
@@ -57,5 +57,5 @@ export default Foundation;
 //         </div>
 //         {/*
 //       </div>
-//     
+//
 // ]

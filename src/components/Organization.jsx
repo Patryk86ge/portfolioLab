@@ -1,6 +1,6 @@
 import React from 'react'
 import FundCard from "../assets/whoWeHelp/FundCard";
-import { organizaja } from "../assets/whoWeHelp/FoundationInfo";
+import { organization } from "../assets/whoWeHelp/FoundationInfo";
 import Card from "./card";
 
 const Organization = () => {
@@ -10,7 +10,8 @@ const Organization = () => {
       <section id="whoweHelp" className="WhoweHelp">
         <div className="container">
           <div className="whoweHelp_card">
-            {organizaja.map((el) => (
+            {
+              organization.map((el) => (
               <FundCard
                 key={el.key}
                 title={el.title}

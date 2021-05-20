@@ -1,4 +1,5 @@
-const FoundationInfo = [{
+const FoundationInfo = [
+  {
     key: 1,
     title: 'W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.',
     name: 'Fundacja “Dbam o Zdrowie” Cel i misja: ',
@@ -19,7 +20,7 @@ const FoundationInfo = [{
   },
 ]
 
-const organizaja = [{
+const organization = [{
     key: 1,
     title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.',
     name: 'Organizacja “Lorem Ipsum 1”',
@@ -69,6 +70,6 @@ const collection = [{
 
 export default FoundationInfo
 export {
-  organizaja,
+  organization,
   collection
 };

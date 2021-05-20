@@ -30,7 +30,13 @@
   }
   img {
     margin: 0;
-    padding-bottom: 50px;
+    padding: 0;
+  }
+  .about_box {
+    height: 100%;
+  }
+  .about_img {
+    height: 100%;
   }
 }
 
@@ -47,11 +53,10 @@
   .about_signature {
     float: right;
   }
-  .about_nag{
+  .about_nag {
     margin-top: 50px;
   }
-  .about_signature{
+  .about_signature {
     margin-bottom: 50px;
   }
-
 }

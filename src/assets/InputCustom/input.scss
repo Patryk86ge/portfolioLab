@@ -4,6 +4,9 @@ input {
   padding: 5px;
   margin: 5px;
   border: none;
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  color:$color_3 ;
   &:focus {
     outline: none;
   }
@@ -17,3 +20,4 @@ label {
 input {
   border-bottom: 1px solid $color_3;
 }
+

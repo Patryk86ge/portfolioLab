@@ -7,13 +7,15 @@ import Collection from "./Collection";
 
 const WhoWeHelp = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Foundation} />
-        <Route exact path="/Organization" component={Organization} />
-        <Route exact path="/Collection" component={Collection} />
-      </Switch>
-    </BrowserRouter>
+    <section id="whoweHelp">
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Foundation} />
+          <Route exact path="/Organization" component={Organization} />
+          <Route exact path="/Collection" component={Collection} />
+        </Switch>
+      </BrowserRouter>
+    </section>
   );
 };
 

@@ -1,63 +1,63 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import * as Scroll from 'react-scroll';
+import { NavHashLink } from "react-router-hash-link";
 import "../assets/scss/elements/navBar.scss";
 
 function NavBar() {
   const [show, setShow] = useState(true);
-  // let Link = Scroll.Link;
   return (
     <nav className="nav">
       <div className="nav_menu">
         <div className="login">
-        <span></span>
-          <Link to="/Login">Zaloguj</Link>
-          <Link className='login_border' to="/Login">Załóż Konto</Link>
+          <span></span>
+          <NavHashLink
+            to="/Login"
+            activeClassName="login_border"
+          >
+            Zaloguj
+          </NavHashLink>
+          <NavHashLink
+            activeClassName="login_border"
+            to="/Registration"
+          >
+            Załóż Konto
+          </NavHashLink>
         </div>
         <div className={show ? "menu" : "menu__show"}>
           <div className="menu_list">
-            <Link
-              className="list list_start"
-              to="/"
-              // activeStyle={{border: '1px solid #3C3C3C'}}
-            >
+            <NavHashLink className="list" activeClassName="selected" to="/">
               Start
-            </Link>
-            <Scroll.Link
-              className = "list"
-              to = "simpleStep"
-              // activeStyle={{border: '1px solid #3C3C3C'}}
+            </NavHashLink>
+            <NavHashLink
+              activeClassName="selected"
+              className="list"
+              to="/#simpleStep"
             >
               O co Chodzi?
-            </Scroll.Link>
-            <Scroll.Link
+            </NavHashLink>
+            <NavHashLink
               className="list"
-              to = "aboutAs"
-              // activeStyle={{border: '1px solid #3C3C3C'}}
+              activeClassName="selected"
+              to="/#aboutAs"
             >
               O nas
-            </Scroll.Link>
-            <Scroll.Link
-            className="list"
-            to = "whoweHelp"
-            // activeStyle={{border: '1px solid #3C3C3C'}}
+            </NavHashLink>
+            <NavHashLink
+              className="list"
+              activeClassName="selected"
+              to="/#whoweHelp"
             >
               Fundacja i organizacja
-            </Scroll.Link>
-            <Scroll.Link
-            className="list"
-            to = "contact"
-            // activeStyle={{border: '1px solid #3C3C3C'}}
+            </NavHashLink>
+            <NavHashLink
+              className="list"
+              activeClassName="selected"
+              to="/#contact"
             >
               Kontakt
-            </Scroll.Link>
+            </NavHashLink>
           </div>
         </div>
-        <button
-        className="hamburger"
-        onClick={() => setShow(!show)}
-        >
-        </button>
+        <button className="hamburger" onClick={() => setShow(!show)}></button>
       </div>
     </nav>
   );

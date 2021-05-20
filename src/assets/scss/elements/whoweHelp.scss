@@ -9,9 +9,13 @@
   .WhoweHelp__btnBox {
     @include flex-fsa;
     flex-wrap: wrap;
+    p {
+      margin: 0;
+      font-size: 1.5rem;
+      color: $color_Font;
+    }
     a {
       font-family: "Open Sans";
-      // border: 1px solid $color_3;
       padding: 15px 20px;
       text-decoration: none;
       color: $color_Font;
@@ -25,7 +29,6 @@
   }
   .WhoweHelp_boxText {
     border-bottom: 1px solid $color_3;
-    // margin-top: 23px;
   }
   .WhoweHelp_link {
     margin: 30px;
@@ -37,17 +40,19 @@
       color: $color_Font;
     }
   }
-  h1{
+  h1 {
     font-size: 1.4rem;
     font-weight: normal;
     margin: 0;
-    font-family:'Merriweather' ;
+    font-family: "Merriweather";
   }
   p {
     margin: 7px 0 15px 0;
     font-size: 1rem;
   }
-
+  .selected {
+    border: 1px solid $color_Font;
+  }
 }
 
 @media (min-width: 990px) {

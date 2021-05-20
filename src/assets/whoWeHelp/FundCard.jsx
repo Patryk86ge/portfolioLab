@@ -15,9 +15,6 @@ const FundCard = (props) => {
           </div>
         </div>
       </div>
-      {/* <div className="WhoweHelp_link">
-        <Link to={props.path}>{props.id}</Link>
-      </div> */}
     </>
   );
 };

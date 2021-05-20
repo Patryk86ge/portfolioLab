@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import InputCustom from "../assets/InputCustom/InputCustom";
 import "../assets/scss/elements/login.scss";
 
-const Login = () => {
+const Registration = () => {
   return (
     <>
       <NavBar />
@@ -17,15 +17,21 @@ const Login = () => {
           <p></p>
           <div className="login_box">
             <div className="login_input">
-              <InputCustom text="Email" type="text" name="" placeholder=""/>
-              <InputCustom text="Hasło" type="password" name="" />
+              <InputCustom
+                text="Email"
+                type="text"
+                name=""
+                style={{ backgroundColor: "red" }}
+              />
+              <InputCustom text="Hasło" type="password" />
+              <InputCustom text="Powtórz hasło" type="password" name="" />
             </div>
             <div className="login_btn">
               <button>
                 <NavHashLink
+                  to="/Registration"
                   activeClassName="selected"
                   className="list"
-                  to="/Registration"
                 >
                   Załóż konto
                 </NavHashLink>
@@ -47,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Registration;

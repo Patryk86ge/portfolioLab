@@ -18,17 +18,41 @@
       padding: 50px 0;
       font-family: "Open Sans";
       font-size: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       button {
-        margin: 0 150px;
         border: none;
         background-color: $primer-white;
-        &:hover {
-          border: 0.75px solid $color_Font;
-        }
+      }
+      .list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        font-family: "Open Sans";
+        color: $color_Font;
+        text-decoration: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      .selected {
+        border: 1px solid $color_Font;
       }
     }
+  }
+  input,
+  textarea {
+    background-color: $color_primary;
   }
 }
 .login_strip {
   margin-top: 50px;
+}
+@media (min-width: 893px) {
+  .login_form {
+    button {
+      margin: 0 150px;
+    }
+  }
 }

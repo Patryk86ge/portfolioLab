@@ -67,6 +67,9 @@
     cursor: pointer;
   }
 }
+.selected {
+  border: 1px solid $color_Font;
+}
 
 .login {
   display: flex;

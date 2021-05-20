@@ -1,7 +1,7 @@
 import React from "react";
 import "../assets/scss/elements/contact.scss";
 import Strip from "./Strip";
-import Input from "../assets/input/Input";
+import InputCustom from "../assets/InputCustom/InputCustom";
 
 import contactForm from "../assets/image/Background-Contact-Form.jpg";
 
@@ -22,10 +22,10 @@ const Contact = () => {
             <div className="form_input">
               <div>
                 {" "}
-                <Input text="pisz swoje imię" type="text" name="NAME" />
+                <InputCustom text="pisz swoje imię" type="text" name="NAME" />
               </div>
               <div>
-                <Input text="Wpisz swój email" type="email" name="email" />
+                <InputCustom text="Wpisz swój email" type="email" name="email" />
               </div>
             </div>
             <label>Wpisz swoją wiadomość</label>
