@@ -3,14 +3,12 @@
 
 .contact {
   margin-top: 50px;
-  .container {
-    height: 100%;
-  }
   img {
     margin: 0;
   }
   .contact_img {
     position: relative;
+    width: 60%;
 
     &::after {
       content: "";
@@ -26,6 +24,7 @@
     height: 100%;
     margin: 0;
     padding-top: 100px;
+    width: 40%;
   }
   .form {
     margin: 0;
@@ -67,14 +66,22 @@
   textarea {
     border-bottom: 1px solid $color_Font;
   }
+  .inputError {
+    color: red;
+    font-size: 10px;
+    padding-left: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  .Label{
+    margin-top: 50px;
+  }
 }
 
 @media (min-width: 999px) {
   .contact {
-    .container {
-      display: flex;
-      justify-content: space-around;
-    }
+    display: flex;
+    justify-content: space-around;
   }
   .form_input {
     display: flex;

@@ -2,61 +2,119 @@
 @import "../settings/colors";
 
 .about_ass {
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "."
-      ".";
-    height: 100%;
-  }
-  .about_nag,
-  .about_box {
-    color: $color_Font;
-    font-size: 1.8rem;
+  .container {
     text-align: center;
-    font-family: "Open Sans";
-    padding: 0 40px;
-    background-color: $color_primary;
-    p {
-      line-height: 3rem;
-    }
+    width: 100%;
   }
   .about_nag {
+    color: $color_Font;
     font-size: 2.4rem;
-    padding-top: 50px;
+    text-align: center;
+    font-family: "Open Sans";
+    // background-color: $color_primary;
+    font-weight: normal;
   }
-  img {
-    margin: 0;
-    padding: 0;
-  }
-  .about_box {
-    height: 100%;
-  }
-  .about_img {
-    height: 100%;
+  p {
+    padding: 0 10px;
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 3rem;
   }
 }
 
 @media (min-width: 990px) {
   .about_ass {
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      gap: 0px 0px;
-      grid-template-areas: ". .";
+    .container {
+      display: flex;
+      justify-content: space-between;
+      height: 50%;
+    }
+    img {
+      margin: 0;
+    }
+    .about_box {
+      width: 50%;
+    }
+    .about_line {
+      margin-bottom: 20px;
     }
   }
-  .about_signature {
-    float: right;
+  .about_img {
+    width: 50%;
+    height: 50%;
+    img {
+      height: 100%;
+    }
   }
-  .about_nag {
-    margin-top: 50px;
+  .about_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_primary;
   }
   .about_signature {
-    margin-bottom: 50px;
+    width: 100%;
+    text-align: end;
+
+    img {
+      margin: 20px 100px 0 0;
+    }
+  }
+  p {
+    margin: 0 100px;
   }
 }
+
+// .about_ass {
+//   height: 50vh;
+
+//   .about_nag,
+//   .about_box {
+//     color: $color_Font;
+//     font-size: 1.8rem;
+//     text-align: center;
+//     font-family: "Open Sans";
+//     padding: 0 40px;
+//     background-color: $color_primary;
+//     height: 100%;
+//     p {
+//       line-height: 3rem;
+//     }
+//   }
+//   .about_nag {
+//     font-size: 2.4rem;
+//     padding-top: 50px;
+//   }
+//   img {
+//     margin: 0;
+//     padding: 0;
+//   }
+//   .about_box {
+//     // height: 100%;
+//   }
+//   .about_img {
+//     height: 100%;
+//     img {
+//       // height: 100vmax;
+//     }
+//   }
+// }
+
+// @media (min-width: 990px) {
+//   .about_ass {
+
+//       display: flex;
+//       justify-content: space-between;
+
+//   }
+//   .about_signature {
+//     float: right;
+//   }
+//   .about_nag {
+//     margin-top: 50px;
+//   }
+//   .about_signature {
+//     margin-bottom: 50px;
+//   }
+// }

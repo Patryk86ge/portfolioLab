@@ -17,8 +17,8 @@ const Login = () => {
           <p></p>
           <div className="login_box">
             <div className="login_input">
-              <InputCustom text="Email" type="text" name="" placeholder=""/>
-              <InputCustom text="Hasło" type="password" name="" />
+              <InputCustom text="Email" type="Email" name="Email"/>
+              <InputCustom text="Hasło" type="password" name="password" />
             </div>
             <div className="login_btn">
               <button>

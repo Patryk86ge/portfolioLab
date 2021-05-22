@@ -19,12 +19,11 @@ const Registration = () => {
             <div className="login_input">
               <InputCustom
                 text="Email"
-                type="text"
-                name=""
-                style={{ backgroundColor: "red" }}
+                type = "Email"
+                name = "Email"
               />
-              <InputCustom text="Hasło" type="password" />
-              <InputCustom text="Powtórz hasło" type="password" name="" />
+              <InputCustom text="Hasło" type="password" name='password'/>
+              <InputCustom text="Powtórz Hasło" type="password" name="passwordRep "/>
             </div>
             <div className="login_btn">
               <button>
