@@ -2,12 +2,6 @@
 @import "../settings/colors";
 
 .header {
-  height: 100vh;
-  background-image: url(../Home-Hero-Image.jpg);
-  background-repeat: no-repeat;
-  background-size: 65%;
-  background-position: -65%;
-
   .header_nag {
     text-align: center;
     font-size: 2rem;
@@ -17,7 +11,11 @@
   }
 
   .header_line {
-    padding-left: 58px;
+    display: flex;
+    justify-content: center;
+    img {
+      margin: 0;
+    }
   }
   .header_btn {
     width: 310px;
@@ -35,7 +33,13 @@
 }
 
 @media (min-width: 720px) {
-
+.header {
+  height: 100vh;
+  background-image: url(../Home-Hero-Image.jpg);
+  background-repeat: no-repeat;
+  background-size: 65%;
+  background-position: -65%;
+}
 
   .header_box {
     display: flex;
@@ -59,5 +63,8 @@
   }
   .login {
     padding-right: 10px;
+  }
+  .bgHeader {
+    display: none;
   }
 }

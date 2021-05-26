@@ -23,8 +23,9 @@
   .contact_form {
     height: 100%;
     margin: 0;
-    padding-top: 100px;
+    //padding-top: 100px;
     width: 40%;
+
   }
   .form {
     margin: 0;
@@ -69,9 +70,19 @@
   .inputError {
     color: red;
     font-size: 10px;
-    padding-left: 5px;
     width: 100%;
     text-align: center;
+    margin: 0;
+    font-family: "open sans";
+  }
+  .inputSuccess {
+    color: forestgreen;
+    font-size: .8rem;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-family: "open sans";
+    font-weight: bold;
   }
   .Label{
     margin-top: 50px;

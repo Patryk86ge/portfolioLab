@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import StripBtn from "../assets/button/StripBtn";
 import imgStyle from "../assets/image/Decoration.svg";
+import bgHeader from "../assets/image/Home-Hero-Image.jpg";
 import "../assets/scss/elements/header.scss";
 
 const Header = () => {
@@ -30,6 +31,7 @@ const Header = () => {
             path="/login" />
           </div>
         </div>
+        <img className='bgHeader' src={bgHeader}/>
       </header>
     </>
   );
