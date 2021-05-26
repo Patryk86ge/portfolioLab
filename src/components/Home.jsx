@@ -7,6 +7,7 @@ import AboutAs from "./AboutAs";
 import WhoWeHelp from "./WhoWeHelp";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import logout from './Logout'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <WhoWeHelp />
       <Contact />
       <Footer />
+        <logout/>
     </>
   );
 };
