@@ -3,13 +3,12 @@
 
 .contact {
   margin-top: 50px;
+  text-align: center;
   img {
     margin: 0;
   }
   .contact_img {
     position: relative;
-    width: 60%;
-
     &::after {
       content: "";
       background-color: $bg-lightness;
@@ -21,10 +20,9 @@
     }
   }
   .contact_form {
-    height: 100%;
+    //height: 100%;
     margin: 0;
-    //padding-top: 100px;
-    width: 40%;
+    //width: 40%;
 
   }
   .form {
@@ -34,9 +32,11 @@
     padding: 0 15px;
     display: flex;
     flex-direction: column;
-    position: relative;
+    text-align: start;
+
 
     .form_input {
+      width: 100%;
       div {
         display: flex;
         flex-direction: column;
@@ -74,6 +74,7 @@
     text-align: center;
     margin: 0;
     font-family: "open sans";
+    padding: 0;
   }
   .inputSuccess {
     color: forestgreen;
@@ -100,5 +101,19 @@
   }
   .contact_form {
     padding-right: 50px;
+  }
+  .contact_img {
+    width: 60%;
+  }
+  .contact_form {
+    height: 100%;
+    width: 40%;
+  }
+  .form_input {
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
   }
 }

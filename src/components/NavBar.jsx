@@ -24,13 +24,19 @@ function NavBar() {
         </div>
         <div className={show ? "menu" : "menu__show"}>
           <div className="menu_list">
-            <NavHashLink className="list" activeClassName="selected" to="/">
+            <NavHashLink
+                className="list"
+                activeClassName="selected"
+                to="/"
+                onClick={() => setShow(true)}
+            >
               Start
             </NavHashLink>
             <NavHashLink
               activeClassName="selected"
               className="list"
               to="/#simpleStep"
+              onClick={() => setShow(true)}
             >
               O co Chodzi?
             </NavHashLink>
@@ -38,6 +44,7 @@ function NavBar() {
               className="list"
               activeClassName="selected"
               to="/#aboutAs"
+              onClick={() => setShow(true)}
             >
               O nas
             </NavHashLink>
@@ -45,6 +52,7 @@ function NavBar() {
               className="list"
               activeClassName="selected"
               to="/#whoweHelp"
+              onClick={() => setShow(true)}
             >
               Fundacja i organizacja
             </NavHashLink>
@@ -52,6 +60,7 @@ function NavBar() {
               className="list"
               activeClassName="selected"
               to="/#contact"
+              onClick={() => setShow(true)}
             >
               Kontakt
             </NavHashLink>

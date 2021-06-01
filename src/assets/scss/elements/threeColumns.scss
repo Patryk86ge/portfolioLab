@@ -3,7 +3,10 @@
 
 .threeColumns {
   padding-top: 50px;
-  background-color: $color_Border;
+
+  p{
+    padding: 23px 0 0 0 ;
+  }
 }
 .grid-container {
   display: grid;
@@ -18,6 +21,7 @@
   height: 100%;
   text-align: center;
   align-items: center;
+  background-color: $color_Border;
 }
 .three_nr {
   padding-top: 10px;
