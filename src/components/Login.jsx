@@ -4,6 +4,7 @@ import Strip from "./Strip";
 import NavBar from "./NavBar";
 import InputCustom from "../assets/InputCustom/InputCustom";
 import "../assets/scss/elements/login.scss";
+import SEO from './SEO'
 
 function validate(values) {
     let errors = {};
@@ -47,6 +48,7 @@ const Login = () => {
 
     return (
         <>
+            <SEO title = 'login'/>
             <NavBar/>
             <div style={{marginTop: '50px'}} className="login_strip">
                 <Strip text="Zaloguj się"/>

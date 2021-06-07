@@ -4,10 +4,12 @@ import StripBtn from "../assets/button/StripBtn";
 import imgStyle from "../assets/image/Decoration.svg";
 import bgHeader from "../assets/image/Home-Hero-Image.jpg";
 import "../assets/scss/elements/header.scss";
+import SEO from './SEO'
 
 const Header = () => {
   return (
     <>
+      <SEO title = 'home page'/>
       <header className="header">
         <NavBar />
         <div className="header_nav">

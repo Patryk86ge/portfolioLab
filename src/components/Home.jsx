@@ -9,6 +9,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import logout from './Logout'
 
+
 const Home = () => {
   return (
     <>
