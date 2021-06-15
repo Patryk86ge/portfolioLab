@@ -32,7 +32,7 @@ const Contact = () => {
         message: "",
     });
     const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [, setIsSubmitting] = useState(false)
     const handleChange = (e) => {
         const {name, value} = e.target;
         setValues({
@@ -77,7 +77,6 @@ const Contact = () => {
                                     text='Imie'
                                     type="text"
                                     name="name"
-                                    placeholder='name...'
                                     value={values.name}
                                     onChange={handleChange}
                                 />
@@ -88,7 +87,6 @@ const Contact = () => {
                                     text='Email'
                                     type="email"
                                     name="email"
-                                    placeholder='email...'
                                     value={values.email}
                                     onChange={handleChange}
                                 />
@@ -100,7 +98,6 @@ const Contact = () => {
                             onChange={handleChange}
                             rows="3"
                             name="message"
-                            placeholder='lorem...'
                             value={values.message}
                         />
                         {errors.message && <p className='inputError'>{errors.message}</p>}

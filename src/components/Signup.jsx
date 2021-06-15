@@ -28,9 +28,9 @@ function validate(values) {
     }
 
     return errors;
-};
+}
 
-const Registration = () => {
+const Signup = () => {
     const [values, setValues] = useState({
         email: "",
         password: "",
@@ -56,6 +56,20 @@ const Registration = () => {
     return (
         <>
             <SEO title="registration"/>
+            <div className="login">
+                <NavHashLink
+                    to="/Login"
+                    activeClassName="login_border"
+                >
+                    Zaloguj
+                </NavHashLink>
+                <NavHashLink
+                    activeClassName="login_border"
+                    to="/Signup"
+                >
+                    Załóż Konto
+                </NavHashLink>
+            </div>
             <NavBar/>
             <div style={{marginTop:'50px'}} className="login_strip">
                 <Strip text="Zaloguj się"/>
@@ -68,7 +82,6 @@ const Registration = () => {
                                 text="Email"
                                 type="email"
                                 name="email"
-                                placeholder='email...'
                                 value={values.email}
                                 onChange={handleChange}
                             />
@@ -77,7 +90,6 @@ const Registration = () => {
                                 text="Hasło"
                                 type="password"
                                 name='password'
-                                placeholder='Hasło...'
                                 value={values.password}
                                 onChange={handleChange}
                             />
@@ -86,7 +98,6 @@ const Registration = () => {
                                 text="Powtórz Hasło"
                                 type="password"
                                 name="password2"
-                                placeholder='Powtórz Hasło...'
                                 value={values.password2}
                                 onChange={handleChange}
                             />
@@ -95,7 +106,7 @@ const Registration = () => {
                         <div className="login_btn">
                             <button className="list">
 
-                                    Załóż konto
+                                Załóż konto
                             </button>
                             <button>
                                 <NavHashLink
@@ -113,5 +124,4 @@ const Registration = () => {
         </>
     );
 };
-
-export default Registration;
+export default Signup;

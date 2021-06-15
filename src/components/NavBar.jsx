@@ -7,21 +7,6 @@ function NavBar() {
   return (
     <nav className="nav">
       <div className="nav_menu">
-        <div className="login">
-          <span></span>
-          <NavHashLink
-            to="/Login"
-            activeClassName="login_border"
-          >
-            Zaloguj
-          </NavHashLink>
-          <NavHashLink
-            activeClassName="login_border"
-            to="/Registration"
-          >
-            Załóż Konto
-          </NavHashLink>
-        </div>
         <div className={show ? "menu" : "menu__show"}>
           <div className="menu_list">
             <NavHashLink

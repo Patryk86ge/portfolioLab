@@ -5,6 +5,8 @@ import NavBar from "./NavBar";
 import InputCustom from "../assets/InputCustom/InputCustom";
 import "../assets/scss/elements/login.scss";
 import SEO from './SEO'
+import Signup from "./Signup";
+
 
 function validate(values) {
     let errors = {};
@@ -49,6 +51,20 @@ const Login = () => {
     return (
         <>
             <SEO title = 'login'/>
+            <div className="login">
+                <NavHashLink
+                    to="/Login"
+                    activeClassName="login_border"
+                >
+                    Zaloguj
+                </NavHashLink>
+                <NavHashLink
+                    activeClassName="login_border"
+                    to="/Signup"
+                >
+                    Załóż Konto
+                </NavHashLink>
+            </div>
             <NavBar/>
             <div style={{marginTop: '50px'}} className="login_strip">
                 <Strip text="Zaloguj się"/>
@@ -64,7 +80,6 @@ const Login = () => {
                                 text="Email"
                                 type="email"
                                 name="email"
-                                placeholder='email...'
                                 value={values.email}
                                 onChange={handleChange}
                             />
@@ -73,7 +88,6 @@ const Login = () => {
                                 text="Hasło"
                                 type="password"
                                 name="password"
-                                placeholder='hasło...'
                                 value={values.password}
                                 onChange={handleChange}
                             />
@@ -84,7 +98,7 @@ const Login = () => {
                                 <NavHashLink
                                     activeClassName="selected"
                                     className="list"
-                                    to="/Registration"
+                                    to="/Signup"
                                 >
                                     Załóż konto
                                 </NavHashLink>

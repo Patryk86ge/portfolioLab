@@ -4,7 +4,7 @@
 .about_ass {
   .container {
     text-align: center;
-    width: 100%;
+
   }
   .about_nag {
     color: $color_Font;
@@ -27,7 +27,7 @@
     .container {
       display: flex;
       justify-content: space-between;
-      height: 50%;
+      //height: 50%;
     }
     img {
       margin: 0;
@@ -66,55 +66,3 @@
   }
 }
 
-// .about_ass {
-//   height: 50vh;
-
-//   .about_nag,
-//   .about_box {
-//     color: $color_Font;
-//     font-size: 1.8rem;
-//     text-align: center;
-//     font-family: "Open Sans";
-//     padding: 0 40px;
-//     background-color: $color_primary;
-//     height: 100%;
-//     p {
-//       line-height: 3rem;
-//     }
-//   }
-//   .about_nag {
-//     font-size: 2.4rem;
-//     padding-top: 50px;
-//   }
-//   img {
-//     margin: 0;
-//     padding: 0;
-//   }
-//   .about_box {
-//     // height: 100%;
-//   }
-//   .about_img {
-//     height: 100%;
-//     img {
-//       // height: 100vmax;
-//     }
-//   }
-// }
-
-// @media (min-width: 990px) {
-//   .about_ass {
-
-//       display: flex;
-//       justify-content: space-between;
-
-//   }
-//   .about_signature {
-//     float: right;
-//   }
-//   .about_nag {
-//     margin-top: 50px;
-//   }
-//   .about_signature {
-//     margin-bottom: 50px;
-//   }
-// }
