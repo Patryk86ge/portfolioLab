@@ -2,10 +2,8 @@
 @import "../settings/colors";
 
 .about_ass {
-  .container {
-    text-align: center;
+  text-align: center;
 
-  }
   .about_nag {
     color: $color_Font;
     font-size: 2.4rem;
@@ -14,6 +12,7 @@
     // background-color: $color_primary;
     font-weight: normal;
   }
+
   p {
     padding: 0 10px;
     font-size: 1.8rem;
@@ -24,17 +23,17 @@
 
 @media (min-width: 990px) {
   .about_ass {
-    .container {
-      display: flex;
-      justify-content: space-between;
-      //height: 50%;
-    }
+    display: flex;
+    justify-content: space-between;
+
     img {
       margin: 0;
     }
+
     .about_box {
       width: 50%;
     }
+
     .about_line {
       margin-bottom: 20px;
     }
@@ -42,6 +41,7 @@
   .about_img {
     width: 50%;
     height: 50%;
+
     img {
       height: 100%;
     }

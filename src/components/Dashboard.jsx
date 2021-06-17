@@ -1,30 +1,55 @@
-import React, {useState} from "react";
+import React, {useState} from 'react';
+import {useAuth} from "../contexts/AuthContext";
+import {Link, useHistory} from "react-router-dom";
 import {NavHashLink} from "react-router-hash-link";
-import "../assets/scss/elements/navBar.scss";
 
 
-function NavBar() {
+const Dashboard = () => {
     const [show, setShow] = useState(true);
+    const [error, setError] = useState('');
+    const {currentUser, logout} = useAuth();
+    const history = useHistory()
+
+    const handleLogOut = async () => {
+        setError('')
+
+        try {
+            await logout()
+            history.push('/logout')
+        } catch {
+            setError('Failed to log out')
+        }
+
+    }
+
     return (
         <>
             <div className="login">
+                {error && <p className='inputError'>{error}</p>}
+                <strong className='nav_login'>Email:</strong><strong className='nav_login'>{currentUser.email}</strong>
                 <NavHashLink
-                    className='nav_login'
-                    to="/Login"
-                    activeClassName="login_border"
-                >
-                    Zaloguj
-                </NavHashLink>
-                <NavHashLink
+                    to='/oddaj-rzeczy'
                     className='nav_login'
                     activeClassName="login_border"
-                    to="/Signup"
                 >
-                    Załóż Konto
+                    oddaj-rzeczy
                 </NavHashLink>
+                <Link
+                    to='/update-profile'
+                    className='nav_login'
+                >
+                    Update Profile
+                </Link>
+                <button
+                    style={{border:'none',backgroundColor:'white'}}
+                    variant='link'
+                    onClick={handleLogOut}
+                    className='nav_login'
+                >
+                    Wyloguj
+                </button>
             </div>
             <nav className="nav">
-
                 <div className="nav_menu">
                     <div className={show ? "menu" : "menu__show"}>
                         <div className="menu_list">
@@ -74,7 +99,25 @@ function NavBar() {
                 </div>
             </nav>
         </>
+        // <>
+        //     <Card>
+        //         <Card.Body>
+        //             <h2 className='text-center mb-4'>Profile</h2>
+        //             {error && <Alert variant='danger'>{error}</Alert>}
+        //             <strong>Email:</strong>{currentUser.email}
+        //             <Link to='/update-profile'
+        //                   className='btn btn-primary w-100 mt-3'
+        //             >
+        //                 Update Profile
+        //             </Link>
+        //         </Card.Body>
+        //
+        //     </Card>
+        //     <div>
+        //         <Button variant='link' onClick={handleLogOut}>Log Out</Button>
+        //     </div>
+        // </>
     );
-}
+};
 
-export default NavBar;
+export default Dashboard

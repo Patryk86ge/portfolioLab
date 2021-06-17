@@ -1,55 +1,52 @@
 import React, {useRef, useState} from 'react';
+import {Alert} from 'react-bootstrap'
 import {useAuth} from '../contexts/AuthContext'
-import { useHistory } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import SEO from "./SEO";
-import {NavHashLink} from "react-router-hash-link";
 import NavBar from "./NavBar";
 import Strip from "./Strip";
 
 
-const Signup = () => {
-
+const UpdateProfile = () => {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const {signup} = useAuth()
+    const {currentUser, updatePassword,updateEmail} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
 
 
-    async function handleSubmit(e) {
+    const  handleSubmit = (e) => {
         e.preventDefault()
 
-        if (!emailRef.current.value) {
-            return setError("Podany email jest nieprawidłowe")
-        }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailRef.current.value)) {
-            return  setError("Zły e-mail")
+        if(passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError('Passowrd do not match')
         }
-        if (passwordRef.current.value.length < 6) {
-            return setError('hasło musi miec minimum 6 znakow')
+        const promises = []
+        if(emailRef.current.value !== currentUser.email) {
+            promises.push(updateEmail(emailRef.current.value))
         }
+        if(passwordRef.current.value) {
+            promises.push(updatePassword(passwordRef.current.value))
+        }
+        Promise.all(promises)
+            .then(() => {
+            history.push("/")
+        }).catch (() => {
+            setError("Failed to update account")
+        }).finally(() => {
+            setLoading(false)
+        })
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Hasła musza byc identyczne')
-        }
-        try {
-            setError('');
-            setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
-            history.push('/dashboard')
-        } catch {
-            setError('Failed to create an account')
-        }
-        setLoading(false)
     }
 
     return (
         <>
-            <SEO title='login'/>
+            <SEO title='Update Profile'/>
             <NavBar/>
             <div className="login_strip">
-                <Strip text="Załóż konto"/>
+                <Strip text="Update Profile"/>
             </div>
             {error && <p className='inputError'>{error}</p>}
             <form className="login_form" onSubmit={handleSubmit}>
@@ -63,7 +60,7 @@ const Signup = () => {
                             <div id='password'>
                                 <label>Password</label>
                                 <input type='password' ref={passwordRef} required/>
-                                {error.passwordRef && <p>{error.passwordRef.current.value}</p>}
+                                {error.passwordRef && <Alert variant='danger'>{error.passwordRef}</Alert>}
                             </div>
                             <div id='password-confirm'>
                                 <label>password-confirm</label>
@@ -73,25 +70,16 @@ const Signup = () => {
                     </div>
                 </div>
                 <div className="login_btn">
-                    <button
-                        className="list"
-                        disabled={loading}
-                    >
-                        Załóż konto
-                    </button>
-                    <button>
-                        <NavHashLink
-                            activeClassName="selected"
-                            className="list"
-                            to="/Login"
-                        >
-                            zaloguj się
-                        </NavHashLink>
-                    </button>
+                    <button disabled={loading} type='submit'>Update Profile</button>
+                </div>
+                <div className="cancel">
+                    <Link style={{textDecoration:'none',color:'#3C3C3C'}} to="/">Cancel</Link>
                 </div>
             </form>
         </>
     );
-};
+}
 
-export default Signup;
+export default UpdateProfile;
+
+

@@ -46,7 +46,7 @@
 .menu__show {
   display: block;
   position: absolute;
-  top: 66px;
+  top: 55px;
   left: 0;
   width: 100vw;
   z-index: 9999;
@@ -76,12 +76,14 @@
   justify-content: flex-end;
   align-items: center;
   margin: 8px 0 5px 0;
-  a {
+  .nav_login {
     text-decoration: none;
     padding: 9px;
     color: $color_3;
     font-size: 0.8rem;
     font-family: "Open Sans";
+
+
   }
   .login_border {
     border: 1px solid $color_Border;

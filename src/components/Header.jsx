@@ -5,28 +5,20 @@ import imgStyle from "../assets/image/Decoration.svg";
 import bgHeader from "../assets/image/Home-Hero-Image.jpg";
 import "../assets/scss/elements/header.scss";
 import SEO from './SEO'
-import {NavHashLink} from "react-router-hash-link";
+import {useAuth} from "../contexts/AuthContext";
+import Dashboard from '../components/Dashboard'
+
+
+
 
 const Header = () => {
+  const {currentUser} = useAuth();
+
   return (
     <>
       <SEO title = 'home page'/>
       <header className="header">
-        <div className="login">
-          <NavHashLink
-              to="/Login"
-              activeClassName="login_border"
-          >
-            Zaloguj
-          </NavHashLink>
-          <NavHashLink
-              activeClassName="login_border"
-              to="/Signup"
-          >
-            Załóż Konto
-          </NavHashLink>
-        </div>
-        <NavBar />
+        {currentUser ? <Dashboard/> :  <NavBar />}
         <div className="header_nav">
           <h1 className="header_nag">
             Zacznij pomagać!
@@ -34,21 +26,29 @@ const Header = () => {
             Oddaj niechiane rzeczy w zaufane rece
           </h1>
           <div className="header_line">
-            {" "}
             <img src={imgStyle} alt="imgStyle" />
           </div>
           <div className="header_box">
-            <StripBtn
-            text="ODDAJ"
-            txt="RZECZY"
-            path="/login" />
+            {currentUser ?  <StripBtn
+                text="ODDAJ"
+                txt="RZECZY"
+                path="/oddaj-rzeczy"
+            /> :  <StripBtn
+                text="ODDAJ"
+                txt="RZECZY"
+                path="/login"
+            /> }
             <StripBtn
             text="ZORGANIZUJ"
             txt="ZBIÓRKĘ"
-            path="/login" />
+            path="/login"
+            />
           </div>
         </div>
-        <img className='bgHeader' src={bgHeader}/>
+        <img
+            className='bgHeader'
+            src={bgHeader} alt='bg'
+        />
       </header>
     </>
   );

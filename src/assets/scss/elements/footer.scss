@@ -12,9 +12,12 @@
     p {
       margin: 10px 10px;
       font-size: 1.1rem;
+
     }
   }
-  p {
+}
+@media (min-width: 720px) {
+  .footer {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

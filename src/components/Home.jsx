@@ -8,18 +8,25 @@ import WhoWeHelp from "./WhoWeHelp";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import logout from './Logout'
+import {useAuth} from "../contexts/AuthContext";
 
 
 const Home = () => {
+    const {currentUser} = useAuth();
   return (
     <>
       <Header />
       <ThreeColumns />
       <SimpleStep />
-      <StripBtn
-      text="ODDAJ"
-      txt="RZECZY"
-      path="/login" />
+        {currentUser ?  <StripBtn
+            text="ODDAJ"
+            txt="RZECZY"
+            path="/oddaj-rzeczy"
+        /> :  <StripBtn
+            text="ODDAJ"
+            txt="RZECZY"
+            path="/login"
+        /> }
       <AboutAs />
       <WhoWeHelp />
       <Contact />

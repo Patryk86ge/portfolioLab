@@ -17,65 +17,77 @@
         align-items: flex-start;
         padding: 30px 80px;
       }
+
       input {
         width: 230px;
       }
     }
 
-    .login_btn {
-      padding: 50px 0;
-      font-family: "Open Sans";
-      font-size: 1rem;
+    .list {
       display: flex;
       justify-content: center;
       align-items: center;
-
-      button {
-        border: none;
-        background-color: $primer-white;
-      }
-
-      .list {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 10px 20px;
-        font-family: "Open Sans";
-        color: $color_Font;
-        text-decoration: none;
-        font-size: 1.1rem;
-        cursor: pointer;
-      }
-
-      .selected {
-        border: 1px solid $color_Font;
+      padding: 10px 20px;
+      font-family: "Open Sans";
+      color: $color_Font;
+      text-decoration: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      :hover {
+        border: 1px solid #3C3C3C;
       }
     }
+
+
   }
 
+  #email,
+  #password,
+  #password-confirm {
+    @include flex-cool;
+    align-items: flex-start;
+  }
+
+  .login_btn {
+    padding: 20px 0;
+    font-family: "Open Sans";
+    font-size: 1rem;
+
+    button {
+      border: none;
+      background-color: $primer-white;
+
+      a {
+        text-decoration: none;
+        color: $color_Font;
+      }
+
+    }
+  }
   input,
   textarea {
     background-color: $color_primary;
   }
 
-  .login_strip {
-    margin-top: 50px;
-  }
-  .inputError {
-    color: red;
-    font-size: 10px;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    font-family: "open sans";
-    padding: 0;
-  }
+}
+.inputError {
+  color: red;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  margin:  0 0 20px 0  ;
+  font-family: "open sans";
+  padding: 0;
+}
+.selected {
+  border: 1px solid #3C3C3C;
 }
 
 @media (min-width: 893px) {
   .login_form {
     button {
       margin: 0 80px;
+
     }
   }
 }
