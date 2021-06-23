@@ -16,19 +16,19 @@ const SimpleStep = () => {
           <div className="simple_StepBox">
             <img src={imgTshirt} alt="Bag" />
             <p className="simple_StepText">Wybierz rzeczy</p>
-            <div className="simple_StepLine"></div>
+            <div className="simple_StepLine"/>
             <p className="simple_StepText">ubrania, zabawki, sprzęt i inne</p>
           </div>
           <div className="simple_StepBox">
             <img src={imgBag} alt="Bag" />
             <p className="simple_StepText">Spakuj je</p>
-            <div className="simple_StepLine"></div>
+            <div className="simple_StepLine"/>
             <p className="simple_StepText">skorzystaj z worków na śmieci</p>
           </div>
           <div className="simple_StepBox">
             <img src={imgMagnifier} alt="Magnifier" />
             <p className="simple_StepText">Zdecyduj komu chcesz pomóc</p>
-            <div className="simple_StepLine"></div>
+            <div className="simple_StepLine"/>
             <p className="simple_StepText">wybierz zaufane miejsce</p>
           </div>
           <div className="simple_StepBox">

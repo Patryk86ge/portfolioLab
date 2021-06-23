@@ -8,7 +8,9 @@ const Strip = (props) => {
     <div className="strip">
       <div className="Decoration">
         <h1>{props.text}</h1>
+          <h1>{props.txt}</h1>
         <img src={imgStyle} alt="Decoration" />
+          <h1>{props.textAdd}</h1>
       </div>
     </div>
   );

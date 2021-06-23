@@ -37,7 +37,7 @@ const Signup = () => {
             setError('');
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
-            history.push('/dashboard')
+            history.push('/')
         } catch {
             setError('Failed to create an account')
         }
@@ -46,7 +46,7 @@ const Signup = () => {
 
     return (
         <>
-            <SEO title='login'/>
+            <SEO title='Załóż konto'/>
             <NavBar/>
             <div className="login_strip">
                 <Strip text="Załóż konto"/>
@@ -61,12 +61,12 @@ const Signup = () => {
                                 <input type='email' ref={emailRef} required/>
                             </div>
                             <div id='password'>
-                                <label>Password</label>
+                                <label>Hasło</label>
                                 <input type='password' ref={passwordRef} required/>
                                 {error.passwordRef && <p>{error.passwordRef.current.value}</p>}
                             </div>
                             <div id='password-confirm'>
-                                <label>password-confirm</label>
+                                <label>Potwierdz Hasło</label>
                                 <input type='password' ref={passwordConfirmRef} required/>
                             </div>
                         </div>
@@ -79,13 +79,14 @@ const Signup = () => {
                     >
                         Załóż konto
                     </button>
+                    <span className='login_line'> | </span>
                     <button>
                         <NavHashLink
                             activeClassName="selected"
                             className="list"
                             to="/Login"
                         >
-                            zaloguj się
+                            zaloguj
                         </NavHashLink>
                     </button>
                 </div>

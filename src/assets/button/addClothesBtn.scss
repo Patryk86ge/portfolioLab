@@ -1,0 +1,19 @@
+@import "../scss/settings/mixin";
+@import "../scss/settings/colors";
+
+.AddClothesBtn {
+  background-color: #FAD648;
+  height: 35vh;
+  text-align: center;
+  h1{
+    padding-top: 30px;
+  }
+}
+@media (min-width: 815px) {
+  .AddClothesBtn {
+    text-align: start;
+    h1{
+      padding: 55px 0 0 100px;
+    }
+  }
+}

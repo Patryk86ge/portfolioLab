@@ -21,7 +21,7 @@ const Home = () => {
         {currentUser ?  <StripBtn
             text="ODDAJ"
             txt="RZECZY"
-            path="/oddaj-rzeczy"
+            path="/addClothes"
         /> :  <StripBtn
             text="ODDAJ"
             txt="RZECZY"

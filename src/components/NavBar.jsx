@@ -22,9 +22,9 @@ function NavBar() {
                 >
                     Załóż Konto
                 </NavHashLink>
+                <button className="hamburger" onClick={() => setShow(!show)}/>
             </div>
             <nav className="nav">
-
                 <div className="nav_menu">
                     <div className={show ? "menu" : "menu__show"}>
                         <div className="menu_list">
@@ -70,7 +70,7 @@ function NavBar() {
                             </NavHashLink>
                         </div>
                     </div>
-                    <button className="hamburger" onClick={() => setShow(!show)}></button>
+
                 </div>
             </nav>
         </>

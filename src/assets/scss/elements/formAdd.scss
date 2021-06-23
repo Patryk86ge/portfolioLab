@@ -1,0 +1,98 @@
+@import "../settings/mixin";
+@import "../settings/colors";
+
+.formAdd {
+  background-image: url(../Background-Form.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .formAdd_steps {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    color: $color_Font;
+    font-size: 1.5rem;
+    margin: 0 0 0 10px;
+
+  }
+
+  .formAdd_nag {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+
+  .form-check {
+    display: flex;
+    justify-items: center;
+    position: relative;
+    margin: 30px 0 ;
+
+    label {
+      color: #000000;
+      font-size: 1.2rem;
+      font-family: "Open Sans", sans-serif;
+      line-height: 2rem;
+      margin: 0;
+      padding:0 0 0 70px;
+    }
+
+    input {
+      width: 0;
+      height: 0;
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: 40px;
+      width: 40px;
+      background-color: #EDEDEB;
+      border: 1px solid #000000;
+      cursor: pointer;
+    }
+  }
+
+  .FormAdd_btn {
+    border: 1px solid $color_Font;
+    width: 180px;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //margin-top: 100px;
+    font-size: 1.5rem;
+    font-family: "Open Sans";
+    margin-left: 10px;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+
+
+}
+
+@media (min-width: 720px) {
+  .formAdd_one {
+    margin: 0 0 0 142px;
+  }
+  .formAdd_steps {
+    padding: 0 0 60px 142px;
+  }
+  .FormAdd_btn {
+    margin: 50px 0 0 151px !important;
+  }
+}

@@ -19,7 +19,7 @@
   position: relative;
   outline: none;
   cursor: pointer;
-  margin: 13px 15px 0 10px;
+  margin: 13px 10px 0 10px;
 }
 .hamburger {
   &:before,
@@ -46,11 +46,12 @@
 .menu__show {
   display: block;
   position: absolute;
-  top: 55px;
+  top: 76px;
   left: 0;
   width: 100vw;
   z-index: 9999;
   background-color: white;
+
 }
 .menu_list {
   margin: 0;
@@ -93,7 +94,13 @@
     font-size: 0.8rem;
     font-family: "Open Sans";
   }
+
 }
+.loginIn {
+  display: flex;
+
+}
+
 
 @media (min-width: 720px) {
   .nav_menu {
@@ -102,9 +109,6 @@
   .hamburger {
     display: none;
   }
-  // .is-active {
-  //   border: 1px solid $color_Font;
-  // }
 
   .menu {
     display: block;
@@ -118,4 +122,5 @@
       height: 100%;
     }
   }
+
 }

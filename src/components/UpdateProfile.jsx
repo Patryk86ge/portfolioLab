@@ -1,5 +1,4 @@
 import React, {useRef, useState} from 'react';
-import {Alert} from 'react-bootstrap'
 import {useAuth} from '../contexts/AuthContext'
 import {Link, useHistory} from "react-router-dom";
 import SEO from "./SEO";
@@ -24,6 +23,9 @@ const UpdateProfile = () => {
             return setError('Passowrd do not match')
         }
         const promises = []
+        setLoading(true)
+        setError("")
+
         if(emailRef.current.value !== currentUser.email) {
             promises.push(updateEmail(emailRef.current.value))
         }
@@ -34,7 +36,7 @@ const UpdateProfile = () => {
             .then(() => {
             history.push("/")
         }).catch (() => {
-            setError("Failed to update account")
+            setError("Nieudany update")
         }).finally(() => {
             setLoading(false)
         })
@@ -55,25 +57,47 @@ const UpdateProfile = () => {
                         <div className="login_input">
                             <div id='email'>
                                 <label>Email</label>
-                                <input type='email' ref={emailRef} required/>
+                                <input
+                                    type='email'
+                                    ref={emailRef}
+                                    required
+                                />
                             </div>
                             <div id='password'>
-                                <label>Password</label>
-                                <input type='password' ref={passwordRef} required/>
-                                {error.passwordRef && <Alert variant='danger'>{error.passwordRef}</Alert>}
+                                <label>hasło</label>
+                                <input
+                                    type='password'
+                                    ref={passwordRef}
+                                    required
+                                />
                             </div>
                             <div id='password-confirm'>
-                                <label>password-confirm</label>
-                                <input type='password' ref={passwordConfirmRef} required/>
+                                <label>potwierdzenie hasla</label>
+                                <input
+                                    type='password'
+                                    ref={passwordConfirmRef}
+                                    required
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="login_btn">
-                    <button disabled={loading} type='submit'>Update Profile</button>
+                    <button
+                        disabled={loading}
+                        type='submit'
+                        style={{cursor:'pointer'}}
+                    >
+                        Update Profile
+                    </button>
                 </div>
                 <div className="cancel">
-                    <Link style={{textDecoration:'none',color:'#3C3C3C'}} to="/">Cancel</Link>
+                    <Link
+                        style={{textDecoration:'none',color:'#3C3C3C'}}
+                        to="/"
+                    >
+                        Cancel
+                    </Link>
                 </div>
             </form>
         </>

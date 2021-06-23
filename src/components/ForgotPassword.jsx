@@ -57,7 +57,7 @@ const ForgotPassword = () => {
                         style={{margin:'0 40px',textDecoration:'none',color:'#3C3C3C'}}
                         to="/login"
                     >
-                        Login
+                        Zaloguj
                     </Link>
                     <Link
                         activeClassName="selected"

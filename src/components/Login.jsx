@@ -36,19 +36,26 @@ const Login = () => {
             await login(emailRef.current.value, passwordRef.current.value)
             history.push('/')
         } catch {
-            setError('Failed to log in')
+            setError('Nieudane Logowanie')
         }
     }
 
     return (
         <>
-            <SEO title='login'/>
+            <SEO
+                title='Zaloguj się'
+            />
             <NavBar/>
             <div className="login_strip">
-                <Strip text="Zaloguj się"/>
+                <Strip
+                    text="Zaloguj się"
+                />
             </div>
             {error && <p className='inputError'>{error}</p>}
-            <form className="login_form" onSubmit={handleSubmit}>
+            <form
+                className="login_form"
+                onSubmit={handleSubmit}
+            >
                 <div className="container">
                     <div className="login_box">
                         <div className="login_input">
@@ -59,10 +66,9 @@ const Login = () => {
                                     ref={emailRef}
                                     required
                                 />
-
                             </div>
                             <div id='password'>
-                                <label>Password</label>
+                                <label>Hasło</label>
                                 <input
                                     type='password'
                                     ref={passwordRef}
@@ -80,18 +86,19 @@ const Login = () => {
                         >
                             Załóż konto
                         </NavHashLink>
-                    </button>
+                    </button><span className='login_line'> | </span>
                     <Link
                         style={{textDecoration:'none',color:'#3C3C3C'}}
                         to="/forgot-password"
                     >
-                        Forgot-Password
+                        reset hasła
                     </Link>
+                    <span className='login_line'> | </span>
                     <button
                         disabled={loading}
                         className="list"
                     >
-                        zaloguj się
+                        zaloguj
                     </button>
                 </div>
             </form>

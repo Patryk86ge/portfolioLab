@@ -4,6 +4,7 @@ import {Link, useHistory} from "react-router-dom";
 import {NavHashLink} from "react-router-hash-link";
 
 
+
 const Dashboard = () => {
     const [show, setShow] = useState(true);
     const [error, setError] = useState('');
@@ -26,13 +27,13 @@ const Dashboard = () => {
         <>
             <div className="login">
                 {error && <p className='inputError'>{error}</p>}
-                <strong className='nav_login'>Email:</strong><strong className='nav_login'>{currentUser.email}</strong>
+                <div className='loginIn'><strong className='nav_login'>Email: {currentUser.email}</strong></div>
                 <NavHashLink
-                    to='/oddaj-rzeczy'
+                    to='/addClothes'
                     className='nav_login'
                     activeClassName="login_border"
                 >
-                    oddaj-rzeczy
+                    oddaj rzeczy
                 </NavHashLink>
                 <Link
                     to='/update-profile'
@@ -41,13 +42,18 @@ const Dashboard = () => {
                     Update Profile
                 </Link>
                 <button
-                    style={{border:'none',backgroundColor:'white'}}
+                    style={{
+                        border:'none',
+                        backgroundColor:'white',
+                        cursor:'pointer'
+                    }}
                     variant='link'
                     onClick={handleLogOut}
                     className='nav_login'
                 >
                     Wyloguj
                 </button>
+                <button className="hamburger" onClick={() => setShow(!show)}/>
             </div>
             <nav className="nav">
                 <div className="nav_menu">
@@ -95,28 +101,10 @@ const Dashboard = () => {
                             </NavHashLink>
                         </div>
                     </div>
-                    <button className="hamburger" onClick={() => setShow(!show)}></button>
+
                 </div>
             </nav>
         </>
-        // <>
-        //     <Card>
-        //         <Card.Body>
-        //             <h2 className='text-center mb-4'>Profile</h2>
-        //             {error && <Alert variant='danger'>{error}</Alert>}
-        //             <strong>Email:</strong>{currentUser.email}
-        //             <Link to='/update-profile'
-        //                   className='btn btn-primary w-100 mt-3'
-        //             >
-        //                 Update Profile
-        //             </Link>
-        //         </Card.Body>
-        //
-        //     </Card>
-        //     <div>
-        //         <Button variant='link' onClick={handleLogOut}>Log Out</Button>
-        //     </div>
-        // </>
     );
 };
 

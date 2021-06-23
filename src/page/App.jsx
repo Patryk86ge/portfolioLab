@@ -9,7 +9,9 @@ import ForgotPassword from '../components/ForgotPassword'
 import UpdateProfile from "../components/UpdateProfile";
 import Home from '../components/Home'
 import Logout from '../components/Logout'
-import OddajRzeczy from "../components/OddajRzeczy";
+import AddClothes from "../components/AddClothes";
+import FormStepTwo from "../components/FormStepTwo";
+
 
 function App() {
     return (
@@ -20,7 +22,8 @@ function App() {
                         <Route exact path="/" component={Home}/>
                         <PrivateRoute exact path='/dashboard' component={Dashboard}/>
                         <PrivateRoute path='/update-profile' component={UpdateProfile}/>
-                        <PrivateRoute path='/oddaj-rzeczy' component={OddajRzeczy}/>
+                        <PrivateRoute path='/addClothes' component={AddClothes}/>
+                        <PrivateRoute path='/formStepOne' component={FormStepTwo}/>
                         <Route path="/signup" component={Signup}/>
                         <Route path="/login" component={Login}/>
                         <Route path="/logout" component={Logout}/>
