@@ -12,7 +12,10 @@ const AboutAs = () => {
         <div className="about_box">
           <h1 className="about_nag">O nas</h1>
           <div className="about_line">
-            <img src={imgStyle} alt="line" />
+            <img
+                src={imgStyle}
+                alt="line"
+            />
           </div>
           <p>
             Nori grape silver beet broccoli kombu beet greens fava bean potato
@@ -24,7 +27,10 @@ const AboutAs = () => {
           </div>
         </div>
         <div className="about_img">
-          <img src={people} alt="people" />
+          <img
+              src={people}
+              alt="people"
+          />
         </div>
     </section>
   );

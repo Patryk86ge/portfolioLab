@@ -27,7 +27,9 @@ const Dashboard = () => {
         <>
             <div className="login">
                 {error && <p className='inputError'>{error}</p>}
-                <div className='loginIn'><strong className='nav_login'>Email: {currentUser.email}</strong></div>
+                <div className='loginIn'>
+                    <strong className='nav_login'>Email: {currentUser.email}</strong>
+                </div>
                 <NavHashLink
                     to='/addClothes'
                     className='nav_login'
@@ -101,7 +103,6 @@ const Dashboard = () => {
                             </NavHashLink>
                         </div>
                     </div>
-
                 </div>
             </nav>
         </>

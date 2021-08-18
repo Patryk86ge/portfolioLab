@@ -9,7 +9,11 @@ const AddClothesHeader = () => {
         <>
             <main className='addClothes'>
                 <div className='addClothes__Img'>
-                    <img src={formHero} alt='clothes'/>
+                    <img
+                        src={formHero}
+                        alt='clothes'
+
+                    />
                 </div>
                 <section className='addClothes__NagBox'>
                     <Dashboard/>
@@ -21,16 +25,32 @@ const AddClothesHeader = () => {
                         />
                     </div>
                     <div className="addClothes__boxes">
-                        <div className='assClothes__box'><h1>1</h1><p>Wybierz rzeczy</p></div>
-                        <div className='assClothes__box'><h1>2</h1><p>Spakuj je w worki</p></div>
-                        <div className='assClothes__box'><h1>3</h1><p>Wybierz fundację</p></div>
-                        <div className='assClothes__box'><h1>4</h1><p>Zamów kuriera</p></div>
+                        <div className='assClothes__box'>
+                            <h1>1</h1>
+                            <p>Wybierz rzeczy</p>
+                        </div>
+                        <div className='assClothes__box'>
+                            <h1>2</h1>
+                            <p>Spakuj je w worki</p>
+                        </div>
+                        <div className='assClothes__box'>
+                            <h1>3</h1>
+                            <p>Wybierz fundację</p>
+                        </div>
+                        <div className='assClothes__box'>
+                            <h1>4</h1>
+                            <p>Zamów kuriera</p>
+                        </div>
                     </div>
                     <div className='addClothes__Img2'>
-                        <img src={formHero} alt='clothes'/>
+                        <img
+                            src={formHero}
+                            alt='clothes'
+                        />
                     </div>
                 </section>
             </main>
+
         </>
 
 

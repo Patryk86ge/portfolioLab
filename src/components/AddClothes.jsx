@@ -1,35 +1,66 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AddClothesHeader from '../components/AddClothesHeader'
 import Contact from "./Contact";
 import Footer from "./Footer";
 import FormStepOne from "./FormStepOne";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
 import FormStepTwo from "./FormStepTwo";
-import PrivateRoute from "./PrivateRoute";
 import FormStepThree from "./FormStepThree";
 import FormStepFor from "./FormStepFor";
-import FormSumAdd from "./FormSumAdd";
-
-
-
 
 const AddClothes = () => {
+    const [currentStep, setCurrentStep] = useState(1);
+
+    const formNest = () => {
+        setCurrentStep((prev) => prev + 1)
+    }
+    const formPrev = () => {
+
+            setCurrentStep((prev) => prev - 1)
+
+    }
+
     return (
         <>
             <AddClothesHeader/>
-            <BrowserRouter>
-                <Switch>
-                    <PrivateRoute path='/' component={FormStepOne}/>
-                    <PrivateRoute path='/formStepOne' component={FormStepTwo}/>
-                    <PrivateRoute path='/formStepThree' component={FormStepThree}/>
-                    <PrivateRoute path='/formStepFor' component={FormStepFor}/>
-                    <PrivateRoute path='/formSumAdd' component={FormSumAdd}/>
-                </Switch>
-            </BrowserRouter>
+            {
+                currentStep === 1 &&(
+                    <FormStepOne
+                    next={formNest}
+                    />
+                )
+            }
+            {
+                currentStep === 2 &&(
+                    <FormStepTwo
+                        next={formNest}
+                        prev={formPrev}
+                    />
+                )
+            }
+            {
+                currentStep === 3 &&(
+                    <FormStepThree
+                        next={formNest}
+                        prev={formPrev}
+                    />
+                )
+            }
+            {
+                currentStep === 4 &&(
+                    <FormStepFor
+                        next={formNest}
+                        prev={formPrev}
+                    />
+                )
+            }
+
+
             <Contact/>
             <Footer/>
         </>
-    );
-}
 
-export default AddClothes
+    )
+};
+
+
+export default AddClothes;
