@@ -3,7 +3,7 @@ import AddClothesBtn from '../assets/button/AddClothesBtn'
 import '../assets/scss/elements/formAdd.scss'
 
 
-const FormStepOne = ({updateData, next, prev}) => {
+const FormStepOne = ({updateData, next}) => {
   const [checked, setChecked] = useState('')
   const checkHelp = (update, id) => {
     if (typeof update === "function") {
